@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { APIService } from '../api.service';
 
 @Component({
   selector: 'app-userlist',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserlistComponent implements OnInit {
 
-  constructor() { }
+  constructor(private apiservice: APIService) { }
 
   ngOnInit() {
   }
 
+  RemoveUser(id) {
+    for (var i = 0; i < this.apiservice.UserList.length; i++) {
+      if (id == this.apiservice.UserList[i]['Id']) {
+        this.apiservice.UserList.splice(i, 1);
+      }
+    }
+  }
 }

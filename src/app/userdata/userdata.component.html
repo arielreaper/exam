@@ -7,18 +7,19 @@
   <title>User Data</title>
 </head>
 <body>
-
-  
-Name:<br><input type="text" name="nama"><br>
-Email:<br><input type="email" name="email"><br>
-Address:<br><input type="text" name="alamat"><br>
-Phone number:<br><input type="number" name="telp"><br>
-Company Name:<br><input type="text" name="company"><br>
-
-
-
-<button type="button" value="Add User" id="add" >Add User</button>
-<input type="reset">
+<div class="container panel panel-default">
+    <div class="panel-heading">
+    <h3 class="text-center">Add User Data</h3>
+    </div>
+    <div class="panel-body">
+    Name <input type="text" class="form-control" [(ngModel)]="NewUser.Name">
+    Email <input type="text"class="form-control"  [(ngModel)]="NewUser.Email">
+    Address <input type="text" class="form-control"[(ngModel)]="NewUser.Address">
+    Phone Number <input type="text" class="form-control" [(ngModel)]="NewUser.Phone">
+    </div>
+    <button class="btn btn-default" (click)="AddUser()"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Add User</button>
+    <br>
+</div>
 
 
 

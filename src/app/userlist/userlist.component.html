@@ -1,38 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
-<body>
-  <table>
-    <caption>User List</caption>
+<div class="container panel panel-default">
+  <div class="panel-heading">
+<h3 class="text-center">User List</h3>
+</div>
+<br>
+<div class="panel-body">
+<table class="table table-hover">
   <tr>
-    <th>No. </th>
-    <th>Name </th>
-    <th>Email </th> 
-    <th>Address </th>
-    <th>Company Name </th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Address</th>
+    <th>Phone No.</th>
     <th>Action</th>
   </tr>
-  <tr *ngFor="let t of data">
-    <td> {{t.id}} </td>
-    <td> {{t.Name}} </td>
-    <td> {{t.Email}} </td> 
-    <td> {{t.Address}} </td>
-    <td> {{t.Company}} </td>
-    <td> <button type="button" value="Delete">Delete</button></td>
+  <tr *ngFor="let u of apiservice.UserList">
+    <td>{{ u.Name }}</td>
+    <td>{{ u.Email }}</td>
+    <td>{{ u.Address }}</td>
+    <td>{{ u.Phone }}</td>
+    <td><button class="btn btn-danger" (click)='RemoveUser(u.Id)'><span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Remove</button></td>
   </tr>
-  <tr *ngFor="let t of data">
-      <td> {{t.id}} </td>
-      <td> {{t.Name}} </td>
-      <td> {{t.Email}} </td> 
-      <td> {{t.Address}} </td>
-      <td> {{t.Company}} </td>
-      <td> <button type="button" value="Delete">Delete</button></td>
-    </tr>
 </table>
-</body>
-</html>
+</div>
+</div>
