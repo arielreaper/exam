@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <table>
+    <caption>User List</caption>
+  <tr>
+    <th>No. </th>
+    <th>Name </th>
+    <th>Email </th> 
+    <th>Address </th>
+    <th>Company Name </th>
+    <th>Action</th>
+  </tr>
+  <tr *ngFor="let t of data">
+    <td> {{t.id}} </td>
+    <td> {{t.Name}} </td>
+    <td> {{t.Email}} </td> 
+    <td> {{t.Address}} </td>
+    <td> {{t.Company}} </td>
+    <td> <button type="button" value="Delete">Delete</button></td>
+  </tr>
+  <tr *ngFor="let t of data">
+      <td> {{t.id}} </td>
+      <td> {{t.Name}} </td>
+      <td> {{t.Email}} </td> 
+      <td> {{t.Address}} </td>
+      <td> {{t.Company}} </td>
+      <td> <button type="button" value="Delete">Delete</button></td>
+    </tr>
+</table>
+</body>
+</html>

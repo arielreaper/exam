@@ -1,0 +1,23 @@
+table, th ,td{
+    border: 2px solid black;
+    font-size: 40px;
+    border-spacing: 9px;
+    font-family: sans-serif;
+}
+
+button[type="button"]{
+    padding: 20px 50px;
+    margin: 3px 3px;
+    border-radius: 7px;
+    border-color: yellow;
+    color: black;
+    background-color: white;
+    box-shadow: 0 80px 160px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+button[type="button"]:hover{
+    background-color: yellow;
+    transition-duration: 0.5s;
+    border-color: black;
+    color: black;
+}
