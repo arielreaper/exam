@@ -12,12 +12,12 @@
     <h3 class="text-center">Add User Data</h3>
     </div>
     <div class="panel-body">
-    Name <input type="text" class="form-control" [(ngModel)]="NewUser.Name">
-    Email <input type="text"class="form-control"  [(ngModel)]="NewUser.Email">
-    Address <input type="text" class="form-control"[(ngModel)]="NewUser.Address">
-    Phone Number <input type="text" class="form-control" [(ngModel)]="NewUser.Phone">
+    Name: <br><input type="text" class="form-control" [(ngModel)]="NewUser.Name"><br>
+    Email: <br><input type="text"class="form-control"  [(ngModel)]="NewUser.Email"><br>
+    Address: <br><input type="text" class="form-control"[(ngModel)]="NewUser.Address"><br>
+    Phone Number: <br><input type="text" class="form-control" [(ngModel)]="NewUser.Phone"><br>
     </div>
-    <button class="btn btn-default" (click)="AddUser()"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Add User</button>
+    <button type="button" (click)="AddUser()"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Add User</button>
     <br>
 </div>
 
