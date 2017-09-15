@@ -1,29 +1,31 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
-import { HttpModule } from '@angular/http';
-
 
 import { AppComponent } from './app.component';
-
-import { MyDataService } from "./my-data.service";
-import { UserdataComponent } from './userdata/userdata.component';
 import { UserlistComponent } from './userlist/userlist.component';
+import { UserdataComponent } from './userdata/userdata.component';
+
+import { APIService } from './api.service';
+import { HttpModule } from '@angular/http';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserdataComponent,
-    UserlistComponent
+    UserlistComponent,
+    UserdataComponent
   ],
   imports: [
-    BrowserModule, FormsModule, RouterModule.forRoot([
-      {path: "", component: UserdataComponent},
-      {path: "Userlist", component: UserlistComponent},
+    BrowserModule,
+    FormsModule,
+    HttpModule,
+    RouterModule.forRoot([
+      { path : '', component: UserlistComponent },
+      { path : 'userdata', component: UserdataComponent }
     ])
   ],
-  providers: [MyDataService],
+  providers: [APIService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
